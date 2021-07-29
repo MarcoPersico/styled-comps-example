@@ -1,29 +1,28 @@
-import HtmlWebPackPlugin from "html-webpack-plugin";
+import HtmlWebPackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import { Configuration } from "webpack";
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./root/index.html",
-  filename: "./index.html"
+  template: './root/index.html',
+  filename: './index.html',
 });
 
-const config: Configuration = {
-  mode: "production",
-  entry: "/root/index.tsx",
+const config = {
+  mode: 'production',
+  entry: '/root/index.tsx',
   output: {
-    path: path.resolve(__dirname, '..', "dist"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, '..', 'dist'),
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
 
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" }
-    ]
+      { test: /\.tsx?$/, loader: 'ts-loader' },
+    ],
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
 };
 
 export default config;
