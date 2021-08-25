@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 export interface Route {
   path: string,
   route?: string,

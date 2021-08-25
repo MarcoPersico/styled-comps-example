@@ -1,3 +1,4 @@
+import Login from '../../modules/Login/page/Login.page';
 import RouterRedirector from '../../modules/Router/RouterRedirector.app';
 import { Route } from '../models';
 
@@ -11,7 +12,7 @@ export const APP_ROUTES: Route[] = [
   {
     path: '/login',
     exact: true,
-    component: TestComp,
+    component: Login,
   },
   {
     path: '/dashboard',
